@@ -1,5 +1,5 @@
-**Date**<br>
-**Course Code & Course Name**<br>
+**November 4th, 2024**<br>
+**MPAD 2003, Mark Talbot**<br>
 **Student's First Name & Last Name**<br>
 **Presented to Jean-Sébastien Marier**<br>
 

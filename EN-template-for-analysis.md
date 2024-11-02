@@ -1,9 +1,9 @@
 **November 4th, 2024**<br>
-**MPAD 2003, Mark Talbot**<br>
-**Student's First Name & Last Name**<br>
+**MPAD 2003**<br>
+**Mark Talbot**<br>
 **Presented to Jean-Sébastien Marier**<br>
 
-# Midterm Project: Exploratory Data Analysis (EDA)
+# Exploring Service Requests By Ward
 
 Use one hashtag symbol (`#`) to create a level 1 heading like this one.
 
@@ -24,7 +24,12 @@ And to create an unordered list, we simply put a star (`*`) before each item.
 
 ## 1. Introduction
 
-Insert text here.
+I’m working with a dataset of service requests in Ottawa from August of 2024 and in this assignment, I will analyze the data by ward. I will figure out which wards have a high and low volume of requests, and further break down the most common types of requests, which will help identify local issues. Lastly, I can investigate which issues are ongoing and which are resolved. For this project, I'm using a subset of a larger dataset published by the city of Ottawa. The subset was provided to me by my instructor in a CSV file.
+* The link to the original dataset is https://open.ottawa.ca/documents/65fe42e2502d442b8a774fd3d954cac5/about
+* The link to the subset is https://raw.githubusercontent.com/jsmarier/course-datasets/refs/heads/main/ottawa-311-service-requests-august-2024.csv
+
+The main sections covered in this assignment will include getting data, understanding data, and finding a potential story.
+
 
 ## 2. Getting Data
 

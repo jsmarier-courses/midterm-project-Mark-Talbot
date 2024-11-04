@@ -37,13 +37,17 @@ My first step in importing the data into Google Sheets was to open the dataset. 
 
 
 Here is a screenshot of the data in google sheets.
-![](Data in google sheets.png)<br>
-*Figure 1: The "Import file" prompt on Google Sheets.*
+![](DataScreenshot.png)<br>
+*Figure 1: The first 24 rows of the dataset in google sheets*
+
+The link to the google sheet dataset is https://docs.google.com/spreadsheets/d/1DqXQppzhMtfShrCygnySmZeWHvo04dcBQtIBluwdadQ/edit?gid=2014664155#gid=2014664155 
+
+There are 11 different data types in the set each with their own column, as well as 28,538 recorded service requests. The data is not very clean as many columns, primarily address, longitude, and latitude, have missing values, and some cells are not aligned with other cells in their same column. 
+Column K uses nominal variables with the different ways services were requested. Column B also uses nominal variables to signify the status of the request. In columns E and F interval variables are used to represent the date that the request was opened and closed. In these columns there are some cells where the dates are missing.
+
 
 To include a screen capture, use the sample code below. Your images should be saved in the same folder as your `.md` file.
 
-![](import-screen-capture.png)<br>
-*Figure 1: The "Import file" prompt on Google Sheets.*
 
 **Here are examples of functions and lines of code put in grey boxes:**
 

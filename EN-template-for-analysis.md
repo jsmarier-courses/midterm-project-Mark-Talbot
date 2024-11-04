@@ -33,7 +33,12 @@ The main sections covered in this assignment will include getting data, understa
 
 ## 2. Getting Data
 
-Use two hashtag symbols (`##`) to create a level 2 heading like this one.
+My first step in importing the data into Google Sheets was to open the dataset. Once it was open I right-clicked on “save as”, and saved it to the folder I created for this project as a CSV file. Next, I had to upload the CSV file to my Google Drive. In my drive, at the top left corner, I clicked new, then file upload. I selected the CSV file from my folder and it uploaded to my drive. Lastly, I opened a new Google sheet and selected file, import, then chose the file I just uploaded and then hit insert. Under import location I selected “create new spreadsheet” and under separator type, I chose Comma as the delimiter in this file is a comma. I clicked on import data and once it finished creating the spreadsheet I clicked the link that said “open now”.
+
+
+Here is a screenshot of the data in google sheets.
+![](Data in google sheets.png)<br>
+*Figure 1: The "Import file" prompt on Google Sheets.*
 
 To include a screen capture, use the sample code below. Your images should be saved in the same folder as your `.md` file.
 

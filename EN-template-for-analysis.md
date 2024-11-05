@@ -33,23 +33,47 @@ The main sections covered in this assignment will include getting data, understa
 
 ## 2. Getting Data
 
+### importing the data into Google Sheets
 My first step in importing the data into Google Sheets was to open the dataset. Once it was open I right-clicked on “save as”, and saved it to the folder I created for this project as a CSV file. Next, I had to upload the CSV file to my Google Drive. In my drive, at the top left corner, I clicked new, then file upload. I selected the CSV file from my folder and it uploaded to my drive. Lastly, I opened a new Google sheet and selected file, import, then chose the file I just uploaded and then hit insert. Under import location I selected “create new spreadsheet” and under separator type, I chose Comma as the delimiter in this file is a comma. I clicked on import data and once it finished creating the spreadsheet I clicked the link that said “open now”.
 
 
-Here is a screenshot of the data in google sheets.
+### Screenshot of the data in google sheets.
 ![](DataScreenshot.png)<br>
 *Figure 1: The first 24 rows of the dataset in google sheets*
 
-The link to the google sheet dataset is https://docs.google.com/spreadsheets/d/1DqXQppzhMtfShrCygnySmZeWHvo04dcBQtIBluwdadQ/edit?gid=2014664155#gid=2014664155 
+### The link to the google sheet dataset is https://docs.google.com/spreadsheets/d/1DqXQppzhMtfShrCygnySmZeWHvo04dcBQtIBluwdadQ/edit?gid=2014664155#gid=2014664155 
 
 There are 11 different data types in the set each with their own column, as well as 28,538 recorded service requests. The data is not very clean as many columns, primarily address, longitude, and latitude, have missing values, and some cells are not aligned with other cells in their same column. 
-Column K uses nominal variables with the different ways services were requested. Column B also uses nominal variables to signify the status of the request. In columns E and F interval variables are used to represent the date that the request was opened and closed. In these columns there are some cells where the dates are missing.
+* Column K uses nominal variables with the different ways services were requested. 
+* Column B also uses nominal variables to signify the status of the request. 
+* In columns E and F interval variables are used to represent the date that the request was opened and closed. Some data points in the closed column are missing. 
 
+### Sugested improvments
+For people to better understand the wards and their location it would be helpful to add the name of the ward inside the column alongside the number, as well as to add another column with the councilor’s name. This will give readers a clearer context to the location of these requests as opposed to trying to figure out ward numbers and coordinates which many people dont know.
 
-To include a screen capture, use the sample code below. Your images should be saved in the same folder as your `.md` file.
+### Question
+How does the volume of service requests vary from ward to ward?
 
+## 3. Understanding Data
 
-**Here are examples of functions and lines of code put in grey boxes:**
+### 3.1 VIMO Analysis
+* **Valid**
+ Column B: All data in this column was valid, it was accurate, complete, and consistent with expected values.
+* **Invalid**
+Column E: This column contained Invalid data as the last request in the dataset was made on September 1st. This is after the August time frame so it is inconsistent with the rest of the data.
+* **Missing**
+Columns G, H, I: Missing Data is frequent in these three columns, they all relate to the location of the request so it is apparent that finding the location of the request was difficult.
+* **Outlier**
+Column K: This column shows the channel of how the request was received. The outliers for this were the requests by counter as only 2 requests were by this channel.
+
+### 3.2 Cleaning data
+I decided I wanted to split the description to get rid of the french version
+I right-clicked on the description column and hit “add column left” to add two new columns
+In the first column I wrote the function [=SPLIT(D2,"|")]
+In the bottom right corner of the cell I put the function in, I dragged the circle down to the end of the datasheet to replica the split function for the rest of the function
+I then copied and pasted values only 
+Lastly, I deleted the old description with both languages and the new column with just French
+
 
 1. If you name a function, put it between "angled" quotation marks like this: `IMPORTHTML`.
 1. If you want to include the entire line of code, do the same thing, albeit with your entire code: `=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)`.

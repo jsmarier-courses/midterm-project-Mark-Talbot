@@ -67,30 +67,43 @@ Columns G, H, I: Missing Data is frequent in these three columns, they all relat
 Column K: This column shows the channel of how the request was received. The outliers for this were the requests by counter as only 2 requests were by this channel.
 
 ### 3.2 Cleaning data
-I decided I wanted to split the description to get rid of the french version
-I right-clicked on the description column and hit “add column left” to add two new columns
-In the first column I wrote the function [=SPLIT(D2,"|")]
-In the bottom right corner of the cell I put the function in, I dragged the circle down to the end of the datasheet to replica the split function for the rest of the function
-I then copied and pasted values only 
-Lastly, I deleted the old description with both languages and the new column with just French
+#### Split Function
+
+1. I decided I wanted to `split` the description to get rid of the french version.
+2. I right-clicked on the description column and hit “add column left” to add two new columns.
+3. In the first column I wrote the function `[=SPLIT(D2,"|")]`. The "|" sets the separator to thst character.
+4. In the bottom right corner of the cell I put the function in, there is a circle. I dragged the circle down to the end of the datasheet to replica the split function for the rest of the column.
+5. I then copied and pasted values only. 
+6. Lastly, I deleted the old description with both languages and the new column with just French.
+
+#### Whitespace Function
+To clear the white space from each cell in the dataset i followed these steps.
+1. I selected the entire dataset by clicking on the block to the left of column A and on top of column 1
+2. I then went to the data tab at the top of the screen and clicked on data cleanup.
+3. From there 3 options showed up, I clicked “trim whitespace”
 
 
-1. If you name a function, put it between "angled" quotation marks like this: `IMPORTHTML`.
-1. If you want to include the entire line of code, do the same thing, albeit with your entire code: `=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)`.
-1. Alternatively, you can put your code in an independent box using the template below:
+#### Concatenate function
+
+I wanted to merge the latitude and longitude to make one column called coordinates. The steps to do so are as follows.
+1. I right-clicked on the column with latitude and selected add column left
+2.  I then typed my title for the column which was “Coordinates”
+3. I then implemented the Concatenate tool into row 1 of the new column and wrote the following function `=CONCATENATE(I2,", ",J2)`
+4. A suggestion box popped up for the rest of the column to replicate the function so I accepted however, if that doesn’t show up you must do the same thing as the `split` function. You drag down from the corner of the cell until you reach the end of the column.
+5. I copied the new column and went to the edit tab, then clicked paste special, and values only
+6. Lastly, I deleted the two original columns of latitude and longitude.
+
+If you name a function, put it between "angled" quotation marks like this: `IMPORTHTML`.
+
+If you want to include the entire line of code, do the same thing, albeit with your entire code: `=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)`.
+
+Alternatively, you can put your code in an independent box using the template below:
 
 ``` r
 =IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)
 ```
 This also shows how to create an ordered list. Simply put `1.` before each item.
 
-## 3. Understanding Data
-
-### 3.1. VIMO Analysis
-
-Use three hashtag symbols (`###`) to create a level 3 heading like this one. Please follow this template when it comes to level 1 and level 2 headings. However, you can use level 3 headings as you see fit.
-
-Insert text here.
 
 Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
 
@@ -98,9 +111,6 @@ Support your claims by citing relevant sources. Please follow [APA guidelines fo
 
 As Cairo (2016) argues, a data visualization should be truthful...
 
-### 3.2. Cleaning Data
-
-Insert text here.
 
 ### 3.3. Exploratory Data Analysis (EDA)
 

@@ -58,11 +58,11 @@ How does the volume of service requests vary from ward to ward?
 
 ### 3.1 VIMO Analysis
 * **Valid**
- Column B: All data in this column was valid, it was accurate, complete, and consistent with expected values.
+ Column B: All data in this column was valid, it was accurate, complete, and consistent with expected values. Each of the rows had one of three options of the status being active, resolved or cancelled.
 * **Invalid**
 Column E: This column contained Invalid data as the last request in the dataset was made on September 1st. This is after the August time frame so it is inconsistent with the rest of the data.
 * **Missing**
-Columns G, H, I: Missing Data is frequent in these three columns, they all relate to the location of the request so it is apparent that finding the location of the request was difficult.
+Columns G, H, I: Missing Data is frequent in these three columns, they all relate to the location of the request so it is apparent that finding the location of the request was difficult. in Column I there are 1,549 missing data points but that is nothing compared to the 24,128 missing coordinates in columns G and H.
 * **Outlier**
 Column K: This column shows the channel of how the request was received. The outliers for this were the requests by counter as only 2 requests were by this channel.
 
@@ -114,17 +114,22 @@ As Cairo (2016) argues, a data visualization should be truthful...
 
 ### 3.3. Exploratory Data Analysis (EDA)
 
-Insert text here.
+I chose these variables because I feel they offer a great way to analyze the data. By sorting the number of requests by ward it allows us to see which wards have a high volume of service requests and which have lower volume. If this data were to be replicated for future months, it would be a good indicator of trends within the wards to see if there have been less or more service requests made in the last month.
 
-**This section should include a screen capture of your pivot table, like so:**
+An interesting statistic that stands out is that ward 12, Rideau-Vanier, has the most service requests in the Ottawa area. This ward had a total of 1,628 requests which is 57 more requests than ward 14, in second place.
 
-![](pivot-table-screen-capture.png)<br>
-*Figure 2: This pivot table shows...*
+This graph can provide us with a story that some wards need to have their resource allocation adjusted based on how many requests they receive. For wards with many requests, they could receive more personnel and equipment to better suit their community. The same applies to wards with low requests, they could have some of thor resources distributed to other wards.
+
+An easy number that would warrant further investigation is the fact that there are 1,549 requests that arent assigned to a ward. Depending on where these requests came from it could massively skew the data and change the narrative.
+
+
+![](pivot_Table.png)<br>
+*Figure 2: This pivot table shows the realtionship between the ward number and the toal number of service requests*
 
 **This section should also include a screen capture of your exploratory chart, like so:**
 
-![](chart-screen-capture.png)<br>
-*Figure 3: This exploratory chart shows...*
+![](Service_Requests_by_Ward.png)<br>
+*Figure 3: This column chart shows the total number of service requests by ward*
 
 ## 4. Potential Story
 

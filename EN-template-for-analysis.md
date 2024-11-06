@@ -1,34 +1,21 @@
-**November 4th, 2024**<br>
+**November 6th, 2024**<br>
 **MPAD 2003**<br>
 **Mark Talbot**<br>
 **Presented to Jean-Sébastien Marier**<br>
 
 # Exploring Service Requests By Ward
 
-Use one hashtag symbol (`#`) to create a level 1 heading like this one.
-
-## Foreword
-
-For this assignment, you must extract data from a dataset provided by the instructor. You must then clean and analyze the data, create exploratory charts/visualizations, and find a potential story idea. Your assignment must clearly detail your process. You are expected to write about 1500-2000 words, and to include several screen captures showing the different steps you went through. Your assignment must be written with the Markdown format and submitted on GitHub Classroom.
-
-I have been assigning different versions of this project to my digital journalism and data storytelling students for a few years now. Its structure was inspired by the main sections/chapters of [*The Data Journalism Handbook*](https://datajournalism.com/read/handbook/one/). This version was further inspired by the [Key Capabilities in Data Science](https://extendedlearning.ubc.ca/programs/key-capabilities-data-science) program offered by the University of British Columbia (UBC).
-
-**Here are some useful resources for this assignment:**
-
-* [GitHub's *Basic writing and formatting syntax* page](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-* [The template repository for this assignment in case you delete something by mistake](https://github.com/jsmarier/jou4100_jou4500_mpad2003_project2_template)
-
-Did you notice how to create a hyperlink? In Markdown, we put the clickable text between square brackets and the actual URL between parentheses.
-
-And to create an unordered list, we simply put a star (`*`) before each item.
-
 ## 1. Introduction
 
-I’m working with a dataset of service requests in Ottawa from August of 2024 and in this assignment, I will analyze the data by ward. I will figure out which wards have a high and low volume of requests, and further break down the most common types of requests, which will help identify local issues. Lastly, I can investigate which issues are ongoing and which are resolved. For this project, I'm using a subset of a larger dataset published by the city of Ottawa. The subset was provided to me by my instructor in a CSV file.
-* The link to the original dataset is https://open.ottawa.ca/documents/65fe42e2502d442b8a774fd3d954cac5/about
-* The link to the subset is https://raw.githubusercontent.com/jsmarier/course-datasets/refs/heads/main/ottawa-311-service-requests-august-2024.csv
+In this assignment, I will be analyzing a subset of a dataset of service requests in Ottawa from August of 2024. The subset was provided to me by my instructor as a CSV file. The city of Ottawa is the source and they receive service requests from many different channels such as, online, walk-ins, and calls, and the data is then published on the open Ottawa website. The dataset was last updated on October 3rd, 2024, and won't be updated again as of November 5th, 2024.
+
+* [Original dataset](https://open.ottawa.ca/documents/65fe42e2502d442b8a774fd3d954cac5/about)
+* [Subset](https://raw.githubusercontent.com/jsmarier/course-datasets/refs/heads/main/ottawa-311-service-requests-august-2024.csv)
 
 The main sections covered in this assignment will include getting data, understanding data, and finding a potential story.
+
+
+The main sections covered in this assignment will include getting data, understanding data through VIMO analysis, cleaning data and analyzing it, as well as finding a potential story.
 
 
 ## 2. Getting Data
@@ -37,13 +24,15 @@ The main sections covered in this assignment will include getting data, understa
 My first step in importing the data into Google Sheets was to open the dataset. Once it was open I right-clicked on “save as”, and saved it to the folder I created for this project as a CSV file. Next, I had to upload the CSV file to my Google Drive. In my drive, at the top left corner, I clicked new, then file upload. I selected the CSV file from my folder and it uploaded to my drive. Lastly, I opened a new Google sheet and selected file, import, then chose the file I just uploaded and then hit insert. Under import location I selected “create new spreadsheet” and under separator type, I chose Comma as the delimiter in this file is a comma. I clicked on import data and once it finished creating the spreadsheet I clicked the link that said “open now”.
 
 
-### Screenshot of the data in google sheets.
+#### Screenshot of the data in google sheets.
 ![](DataScreenshot.png)<br>
 *Figure 1: The first 24 rows of the dataset in google sheets*
 
-### The link to the google sheet dataset is https://docs.google.com/spreadsheets/d/1DqXQppzhMtfShrCygnySmZeWHvo04dcBQtIBluwdadQ/edit?gid=2014664155#gid=2014664155 
+### The link to the google sheet dataset is
+[Google Sheet](https://docs.google.com/spreadsheets/d/1dqF2A1oiw0w1ehWgON6WXc14ytvHVBTgU7UsbzIy1aA/edit?gid=91507516#gid=91507516 )
+ 
 
-There are 11 different data types in the set each with their own column, as well as 28,538 recorded service requests. The data is not very clean as many columns, primarily address, longitude, and latitude, have missing values, and some cells are not aligned with other cells in their same column. 
+There are 11 different data types in the set each with their own column, as well as 28,538 recorded service requests. The data is not very clean as many columns such as address, longitude, and attitude, have missing values, and some cells are not aligned with other cells in the same column.  
 * Column K uses nominal variables with the different ways services were requested. 
 * Column B also uses nominal variables to signify the status of the request. 
 * In columns E and F interval variables are used to represent the date that the request was opened and closed. Some data points in the closed column are missing. 
@@ -57,6 +46,7 @@ How does the volume of service requests vary from ward to ward?
 ## 3. Understanding Data
 
 ### 3.1 VIMO Analysis
+Cleaning data is very important, and making sure you check the dataset for missing or invalid values is as well. In the Data Journey reading it mentions that you must “document what you found and what you did to clean the data” (Data Journey, 2021, Step 2: Explore, clean, describe section). It is crucial to maintain the integrity of the set and document what is changed. So I will analyze the data using VIMO (Valid, Invalid, Missing, Outlier).
 * **Valid**
  Column B: All data in this column was valid, it was accurate, complete, and consistent with expected values. Each of the rows had one of three options of the status being active, resolved or cancelled.
 * **Invalid**
@@ -93,10 +83,13 @@ I wanted to merge the latitude and longitude to make one column called coordinat
 5. I copied the new column and went to the edit tab, then clicked paste special, and values only
 6. Lastly, I deleted the two original columns of latitude and longitude.
 
+#### Screenshot of cleaned data set
+![](Cleaned_set.png)<br>
+*Figure 2: This is the dataset after I used the three cleaning techniques*
 
 
 
-Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
+Support your claims by citing relevant sources. Please follow .
 
 **For example:**
 
@@ -140,12 +133,14 @@ My potential story is that resources need to be reallocated between the wards ba
 It would also be helpful to get Insight from the people who live in these wards and their Councillors. Being able to interview the people and get their insight as to what is functional and what isn’t could greatly help solve the issues. Interviewing the ward Councilors would also help as I could ask them what problems they are aware of, what they plan to do to fix them, and what factors are considered when allocating resources.
 
 
-#### Relevant sources
-https://ruor.uottawa.ca/items/b5ac1fc5-7185-4556-a59c-3b6af4051085
+### Relevant sources 
+
+[Article 1](https://ruor.uottawa.ca/items/b5ac1fc5-7185-4556-a59c-3b6af4051085)
 
 This article focuses on urban inequality in Ottawa and explores the idea of gentrification.This relates to my story because these up-and-coming neighborhoods will require new services and resources will need to be spread out.
 
-https://www.kdevelopedia.org/Development-Overview/all/resource-reallocation--23.do
+[Article 2](https://www.kdevelopedia.org/Development-Overview/all/resource-reallocation--23.do)
+
 This Article Highlights is relevant to my story because it highlights the importance of reallocation of resources.
 
 ## 5. Conclusion
@@ -157,8 +152,15 @@ Something I could have done differently would be to start the assignment earlier
 
 ## 6. References
 
-Include a list of your references here. Please follow [APA guidelines for references](https://apastyle.apa.org/style-grammar-guidelines/references). Hanging paragraphs aren't required though.
 
-**Here's an example:**
+Statistique Canada. (2021, September 2). Bar chart (5.2). Statistics Canada. Retrieved November 6, 2024, from https://www150.statcan.gc.ca/n1/edu/power-pouvoir/ch9/bargraph-diagrammeabarres/5214818-eng.htm
 
-Bounegru, L., & Gray, J. (Eds.). (2021). *The Data Journalism Handbook 2: Towards A Critical Data Practice*. Amsterdam University Press. [https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153](https://ocul-crl.primo.exlibrisgroup.com/permalink/01OCUL_CRL/hgdufh/alma991022890087305153)
+Ilic, L. (2023, June 21). Urban divisions: Gentrification and income polarization in Ottawa, Canada. University of Ottawa. Retrieved November 5, 2024, from https://ruor.uottawa.ca/items/b5ac1fc5-7185-4556-a59c-3b6af4051085
+
+City of Ottawa. (n.d.). Mayor and City Councillors. Retrieved November 6, 2024, from https://ottawa.ca/en/city-hall/mayor-and-city-councillors
+
+K-Developedia. (n.d.). Resource reallocation. Retrieved November 6, 2024, from https://www.kdevelopedia.org/Development-Overview/all/resource-reallocation--23.do
+
+City of Ottawa. (2024, October 3). 2024 service requests. Retrieved November 4, 2024, from https://open.ottawa.ca/documents/65fe42e2502d442b8a774fd3d954cac5/about
+
+Marier, J.-S. (2021, October 9). Cleaning data in Google Sheets [Video]. YouTube. Retrieved November 3, 2024, from https://www.youtube.com/watch?v=U4yigiawIEU&embeds_referring_euri=https%3A%2F%2Fbrightspace.carleton.ca%2F&source_ve_path=MjM4NTE

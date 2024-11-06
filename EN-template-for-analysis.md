@@ -93,16 +93,7 @@ I wanted to merge the latitude and longitude to make one column called coordinat
 5. I copied the new column and went to the edit tab, then clicked paste special, and values only
 6. Lastly, I deleted the two original columns of latitude and longitude.
 
-If you name a function, put it between "angled" quotation marks like this: `IMPORTHTML`.
 
-If you want to include the entire line of code, do the same thing, albeit with your entire code: `=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)`.
-
-Alternatively, you can put your code in an independent box using the template below:
-
-``` r
-=IMPORTHTML("https://en.wikipedia.org/wiki/China"; "table", 5)
-```
-This also shows how to create an ordered list. Simply put `1.` before each item.
 
 
 Support your claims by citing relevant sources. Please follow [APA guidelines for in-text citations](https://apastyle.apa.org/style-grammar-guidelines/citations).
@@ -113,31 +104,56 @@ As Cairo (2016) argues, a data visualization should be truthful...
 
 
 ### 3.3. Exploratory Data Analysis (EDA)
+![](pivot_Table.png)<br>
+*Figure 2: This pivot table shows the realtionship between the ward number and the toal number of service requests*
+
+
+![](Service_Requests_by_Ward.png)<br>
+*Figure 3: This column chart shows the total number of service requests by ward*
+
+
+
 
 I chose these variables because I feel they offer a great way to analyze the data. By sorting the number of requests by ward it allows us to see which wards have a high volume of service requests and which have lower volume. If this data were to be replicated for future months, it would be a good indicator of trends within the wards to see if there have been less or more service requests made in the last month.
 
 An interesting statistic that stands out is that ward 12, Rideau-Vanier, has the most service requests in the Ottawa area. This ward had a total of 1,628 requests which is 57 more requests than ward 14, in second place.
 
-This graph can provide us with a story that some wards need to have their resource allocation adjusted based on how many requests they receive. For wards with many requests, they could receive more personnel and equipment to better suit their community. The same applies to wards with low requests, they could have some of thor resources distributed to other wards.
+This graph can provide us with a story that some wards need to have their resource allocation adjusted based on how many requests they receive. For wards with many requests, they could receive more personnel and equipment to better suit their community. The same applies to wards with low requests, they could have some of their resources distributed to other wards.
 
-An easy number that would warrant further investigation is the fact that there are 1,549 requests that arent assigned to a ward. Depending on where these requests came from it could massively skew the data and change the narrative.
+An easy number that would warrant further investigation is 1,549 requests that aren't assigned to a ward. Depending on where these requests came from it could massively skew the data and change the narrative.
+
+I decided to look into this even further and created two pie charts, one for ward 12, and one for ward 20. The highest and lowest volume of requests per ward. Based on these two pie charts you can see some similarities and differences. Both pie charts have “garbage and recycling” and “Bylaw services” in the top three most frequent requests, indicating that those are two major issues in the city. A difference is that ward 12 is Rideau-Vanier which is in the city, while ward 20 is the Osgoode ward, which is in the country. And while both graphs had a high percentage of Bylaw services, ward 12 had 601 compared to ward 20 with 100. This makes sense as there aren't as many by law officers in that part of the city.
 
 
-![](pivot_Table.png)<br>
-*Figure 2: This pivot table shows the realtionship between the ward number and the toal number of service requests*
 
-**This section should also include a screen capture of your exploratory chart, like so:**
 
-![](Service_Requests_by_Ward.png)<br>
-*Figure 3: This column chart shows the total number of service requests by ward*
+
+
+![](Ward_12_Service_Requests_by_Type.png)<br>
+*Figure 4: This pie chart shows the distribution of service requests in ward 12*
+
+![](Ward_20_Service_Requests(2).png)<br>
+*Figure 3: This pie chart shows the distribution of service requests in ward 20*
 
 ## 4. Potential Story
+My potential story is that resources need to be reallocated between the wards based on the number and type of requests. A lot more information is needed to create a compelling story, as the base data just isn’t enough to get all the facts straight. To successfully tell this story, I would need the population sizes for each ward to help see if certain wards have fewer requests because they have less people or if it's more efficiently run. To deepen the story, data from previous months would be helpful to analyze trends and predict future issues. 
+It would also be helpful to get Insight from the people who live in these wards and their Councillors. Being able to interview the people and get their insight as to what is functional and what isn’t could greatly help solve the issues. Interviewing the ward Councilors would also help as I could ask them what problems they are aware of, what they plan to do to fix them, and what factors are considered when allocating resources.
 
-Insert text here.
+
+#### Relevant sources
+https://ruor.uottawa.ca/items/b5ac1fc5-7185-4556-a59c-3b6af4051085
+
+This article focuses on urban inequality in Ottawa and explores the idea of gentrification.This relates to my story because these up-and-coming neighborhoods will require new services and resources will need to be spread out.
+
+https://www.kdevelopedia.org/Development-Overview/all/resource-reallocation--23.do
+This Article Highlights is relevant to my story because it highlights the importance of reallocation of resources.
 
 ## 5. Conclusion
 
-Insert text here.
+The most challenging aspect of this assignment was dealing with such a large dataset and I felt overwhelmed when seeing how many rows of data there were. Another challenging aspect was getting used to using Github and VScode again as it has been almost a year since I last used it. There were a few rewarding parts, firstly I felt a sense of accomplishment when creating the charts and pivot tables as I sifted through the data and found something worth visualizing. Secondly, the finished product is rewarding, seeing how all my hard work created an in-depth analysis of the data. 
+
+The biggest gap in my knowledge is probably putting the functions in Google Sheets into practice. I feel I can remember what each function does but when it is time to actually perform the task I have to refer back to lecture videos. 
+Something I could have done differently would be to start the assignment earlier, I fell behind in other classes leaving me with less time to complete the assignment than I would have liked. Adding on to that point, if I had more time I could have planned my assignment better before starting. I found myself just jumping into the questions rather than taking my time to plan it out beforehand.
 
 ## 6. References
 
